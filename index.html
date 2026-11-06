@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Axivo LLC | Software Engineering, Cloud & AI</title>
+    <meta name="description"
+        content="Axivo LLC is a software company building custom platforms, cloud infrastructure, mobile apps, and AI products for ambitious businesses." />
+    <meta property="og:title" content="Axivo LLC | Software Engineering, Cloud & AI" />
+    <meta property="og:description" content="Custom software, cloud, and AI built to scale." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234F46E5'/%3E%3Cpath d='M16 49 L32 14 L48 49' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="progress"></div>
+
+    <!-- LOGO SYMBOL -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#6366F1" />
+                <stop offset=".6" stop-color="#06B6D4" />
+                <stop offset="1" stop-color="#EC4899" />
+            </linearGradient>
+        </defs>
+        <symbol id="axivo" viewBox="0 0 64 64">
+            <rect width="64" height="64" rx="17" fill="url(#lg)" />
+            <path d="M15 50 L32 13 L49 50" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M24 39 H40" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85" />
+            <circle cx="32" cy="13" r="5.5" fill="#0B1020" stroke="#fff" stroke-width="3" />
+        </symbol>
+    </svg>
+
+    <!-- ICON SPRITE -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-globe" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </symbol>
+        <symbol id="i-smartphone" viewBox="0 0 24 24">
+            <rect x="5" y="2" width="14" height="20" rx="2" />
+            <path d="M12 18h.01" />
+        </symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+        </symbol>
+        <symbol id="i-cpu" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <rect x="9" y="9" width="6" height="6" />
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+        </symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24">
+            <path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+            <circle cx="11" cy="11" r="2" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </symbol>
+        <symbol id="i-shieldcheck" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+        </symbol>
+        <symbol id="i-refresh" viewBox="0 0 24 24">
+            <path d="M23 4v6h-6M1 20v-6h6M3.5 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.5 15" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-10 6L2 7" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+        </symbol>
+        <symbol id="i-zap" viewBox="0 0 24 24">
+            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+        </symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24">
+            <path d="M3 3v18h18M7 15l4-4 4 3 5-7" />
+        </symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" />
+        </symbol>
+        <symbol id="i-file" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+        </symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24">
+            <path d="m12 2 10 5-10 5L2 7l10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </symbol>
+        <symbol id="i-server" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="8" rx="2" />
+            <rect x="2" y="14" width="20" height="8" rx="2" />
+            <path d="M6 6h.01M6 18h.01" />
+        </symbol>
+        <symbol id="i-terminal" viewBox="0 0 24 24">
+            <path d="m4 17 6-6-6-6M12 19h8" />
+        </symbol>
+        <symbol id="i-box" viewBox="0 0 24 24">
+            <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16zM3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
+        </symbol>
+        <symbol id="i-network" viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
+        </symbol>
+        <symbol id="i-database" viewBox="0 0 24 24">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+        </symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+        </symbol>
+        <symbol id="i-bell" viewBox="0 0 24 24">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" />
+        </symbol>
+        <symbol id="i-sparkle" viewBox="0 0 24 24">
+            <path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3z" />
+        </symbol>
+        <symbol id="i-users" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            <circle cx="9" cy="7" r="4" />
+        </symbol>
+        <symbol id="i-target" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+        </symbol>
+        <symbol id="i-message" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+        </symbol>
+        <symbol id="i-up" viewBox="0 0 24 24">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+        </symbol>
+        <symbol id="i-play" viewBox="0 0 24 24">
+            <path d="M6 4l14 8-14 8V4z" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5" />
+        </symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12h14" />
+        </symbol>
+
+        <!-- brand icons (filled) -->
+        <symbol id="b-linkedin" viewBox="0 0 24 24">
+            <path
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+        </symbol>
+        <symbol id="b-x" viewBox="0 0 24 24">
+            <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </symbol>
+        <symbol id="b-github" viewBox="0 0 24 24">
+            <path
+                d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3z" />
+        </symbol>
+        <symbol id="b-youtube" viewBox="0 0 24 24">
+            <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z" />
+        </symbol>
+    </svg>
+
+    <!-- <div class="announce"><svg class="i">
+            <use href="#i-sparkle" />
+        </svg><span>Now booking Q1 2027 projects. Limited engineering slots.</span><a href="#contact">Reserve yours</a>
+    </div> -->
+
+    <header>
+        <div class="container nav">
+            <a href="#home" class="logo" aria-label="Axivo LLC">
+                <svg width="42" height="42">
+                    <use href="#axivo" />
+                </svg>
+                <span>Axivo</span><em>LLC</em>
+            </a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#pricing">Engagement</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <button class="icon-btn" id="theme" aria-label="Toggle theme"></button>
+                <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+                <button class="icon-btn burger" id="burger" aria-label="Menu"><svg class="i">
+                        <use href="#i-menu" />
+                    </svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="mesh"><i></i><i></i><i></i></div>
+        <div class="grid-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="pill rv"><b></b><span>Software engineering studio · Cloud · AI</span></div>
+                    <h1 class="rv d1">We build software for <br><span class="grad typed" id="typed">&nbsp;</span></h1>
+                    <p class="lead rv d2">Axivo LLC is a product engineering company. We design, build, and run secure,
+                        scalable platforms that help ambitious businesses move faster than their competition.</p>
+                    <div class="hero-btns rv d3">
+                        <a href="#contact" class="btn btn-primary">Book a Free Consultation <svg class="i">
+                                <use href="#i-arrow" />
+                            </svg></a>
+                        <a href="#work" class="btn btn-ghost"><svg class="i">
+                                <use href="#i-play" />
+                            </svg> See Our Work</a>
+                    </div>
+                    <div class="hero-points rv d3">
+                        <div><svg class="i">
+                                <use href="#i-shieldcheck" />
+                            </svg>Secure by default</div>
+                        <div><svg class="i">
+                                <use href="#i-zap" />
+                            </svg>Fast delivery</div>
+                        <div><svg class="i">
+                                <use href="#i-users" />
+                            </svg>Senior engineers</div>
+                    </div>
+                </div>
+
+                <div class="hero-photo rv d2">
+                    <div class="float-chip c1"><span class="ci"><svg class="i">
+                                <use href="#i-zap" />
+                            </svg></span>Deploy complete · 38s</div>
+                    <div class="float-chip c2"><span class="ci"><svg class="i">
+                                <use href="#i-shieldcheck" />
+                            </svg></span>0 critical vulnerabilities</div>
+                    <div class="ph frame">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1100&q=80"
+                            alt="Software team collaborating around laptops" onerror="this.style.display='none'">
+                    </div>
+                    <div class="photo-card">
+                        <div class="ci"><svg class="i">
+                                <use href="#i-code" />
+                            </svg></div>
+                        <div><b>Engineering, design and strategy</b><span>One team. Idea to production.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-wrap rv">
+                <div class="dash">
+                    <div class="dash-top"><i></i><i></i><i></i><span>app.axivo.com/dashboard</span></div>
+                    <div class="dash-body">
+                        <div class="side">
+                            <div class="on"><svg class="i">
+                                    <use href="#i-grid" />
+                                </svg>Overview</div>
+                            <div><svg class="i">
+                                    <use href="#i-chart" />
+                                </svg>Analytics</div>
+                            <div><svg class="i">
+                                    <use href="#i-layers" />
+                                </svg>Projects</div>
+                            <div><svg class="i">
+                                    <use href="#i-server" />
+                                </svg>Infrastructure</div>
+                            <div><svg class="i">
+                                    <use href="#i-sparkle" />
+                                </svg>AI Insights</div>
+                            <div><svg class="i">
+                                    <use href="#i-bell" />
+                                </svg>Alerts</div>
+                        </div>
+                        <div class="main">
+                            <div class="kpis">
+                                <div class="kpi"><small>Active Users</small>
+                                    <h4>48.2K</h4><span>+12.4%</span>
+                                </div>
+                                <div class="kpi"><small>Avg. Response</small>
+                                    <h4>142ms</h4><span>8.1% faster</span>
+                                </div>
+                                <div class="kpi"><small>Uptime</small>
+                                    <h4>99.98%</h4><span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <svg viewBox="0 0 600 150" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="af" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0" stop-color="#6366F1" stop-opacity=".45" />
+                                            <stop offset="1" stop-color="#6366F1" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path
+                                        d="M0 120 C60 110 90 60 150 75 S250 120 310 70 S430 20 480 45 S560 30 600 12 V150 H0Z"
+                                        fill="url(#af)" />
+                                    <path class="line"
+                                        d="M0 120 C60 110 90 60 150 75 S250 120 310 70 S430 20 480 45 S560 30 600 12"
+                                        fill="none" stroke="#06B6D4" stroke-width="3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marq">
+        <p>Technologies we build with</p>
+        <div class="track" id="track">
+            <span><svg class="i">
+                    <use href="#i-code" />
+                </svg>React</span>
+            <span><svg class="i">
+                    <use href="#i-layers" />
+                </svg>Next.js</span>
+            <span><svg class="i">
+                    <use href="#i-server" />
+                </svg>Node.js</span>
+            <span><svg class="i">
+                    <use href="#i-terminal" />
+                </svg>Python</span>
+            <span><svg class="i">
+                    <use href="#i-cloud" />
+                </svg>AWS</span>
+            <span><svg class="i">
+                    <use href="#i-cloud" />
+                </svg>Azure</span>
+            <span><svg class="i">
+                    <use href="#i-box" />
+                </svg>Docker</span>
+            <span><svg class="i">
+                    <use href="#i-network" />
+                </svg>Kubernetes</span>
+            <span><svg class="i">
+                    <use href="#i-cpu" />
+                </svg>OpenAI</span>
+            <span><svg class="i">
+                    <use href="#i-database" />
+                </svg>PostgreSQL</span>
+            <span><svg class="i">
+                    <use href="#i-smartphone" />
+                </svg>Flutter</span>
+            <span><svg class="i">
+                    <use href="#i-code" />
+                </svg>Rust</span>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">What we do</span>
+                <h2>Everything you need to <span class="grad">ship great software</span></h2>
+                <p>From the first sketch to production at scale, one team owns the whole journey.</p>
+            </div>
+            <div class="bento">
+                <div class="b s4 rv">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-globe" />
+                        </svg></div>
+                    <h3>Custom Web Platforms</h3>
+                    <p>SaaS products, customer portals, marketplaces, and internal tools. Engineered for performance,
+                        accessibility, and growth from day one.</p>
+                    <div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>GraphQL</span>
+                    </div>
+                </div>
+                <div class="b s2 rv d1">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-smartphone" />
+                        </svg></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform iOS and Android apps with polished UX.</p>
+                    <div class="tags"><span>Swift</span><span>Kotlin</span><span>Flutter</span></div>
+                </div>
+                <div class="b s2 rv">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-cloud" />
+                        </svg></div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Resilient architecture, CI/CD, observability, and cost optimization.</p>
+                    <div class="tags"><span>AWS</span><span>Azure</span><span>Terraform</span></div>
+                </div>
+                <div class="b s4 rv d1">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-cpu" />
+                        </svg></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Copilots, document intelligence, recommendation engines, and workflow automation, integrated
+                        safely into your existing systems and data.</p>
+                    <div class="tags"><span>LLMs</span><span>RAG</span><span>Python</span><span>Vector DB</span></div>
+                </div>
+                <div class="b s2 rv">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-pen" />
+                        </svg></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Research-driven interfaces and design systems.</p>
+                </div>
+                <div class="b s2 rv d1">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-shield" />
+                        </svg></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Pen testing, code audits, and compliance readiness.</p>
+                </div>
+                <div class="b s2 rv d2">
+                    <div class="ico"><svg class="i">
+                            <use href="#i-refresh" />
+                        </svg></div>
+                    <h3>Modernization</h3>
+                    <p>Migrate legacy systems with zero-drama rollouts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="alt" id="about">
+        <div class="container about">
+            <div class="collage rv">
+                <div class="ph big">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&q=80"
+                        alt="Developers collaborating around laptops" loading="lazy"
+                        onerror="this.style.display='none'">
+                </div>
+                <div class="ph small">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80"
+                        alt="Engineers working together at a desk" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="badge"><b class="grad">8+</b><span>Years of engineering</span></div>
+            </div>
+            <div class="rv d1">
+                <span class="eyebrow">About the studio</span>
+                <h2>A technology partner that <span class="grad">acts like your own team</span></h2>
+                <p>Axivo LLC turns complex challenges into simple, reliable products. We pair clean engineering with
+                    clear communication, so you always know where your project stands.</p>
+                <ul class="checks">
+                    <li>
+                        <div class="ico"><svg class="i">
+                                <use href="#i-target" />
+                            </svg></div>
+                        <div><b>Outcome-driven</b><span>We start with your business goals, not a feature list.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico"><svg class="i">
+                                <use href="#i-message" />
+                            </svg></div>
+                        <div><b>Transparent communication</b><span>Weekly updates, shared roadmaps, and demos every
+                                sprint.</span></div>
+                    </li>
+                    <li>
+                        <div class="ico"><svg class="i">
+                                <use href="#i-shieldcheck" />
+                            </svg></div>
+                        <div><b>Quality and security built in</b><span>Testing, code review, and security checks on
+                                every release.</span></div>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Work With Us <svg class="i">
+                        <use href="#i-arrow" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="platform">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">Capabilities</span>
+                <h2>Engineering built on <span class="grad">solid foundations</span></h2>
+                <p>The practices behind every Axivo project.</p>
+            </div>
+            <div class="tabs rv" id="tabs">
+                <button class="tab on" data-t="0">Architecture</button>
+                <button class="tab" data-t="1">Security</button>
+                <button class="tab" data-t="2">Automation</button>
+                <button class="tab" data-t="3">AI Integration</button>
+            </div>
+
+            <div class="panel on rv in">
+                <div>
+                    <h3>Scalable by design</h3>
+                    <p>We architect systems that handle growth without costly rewrites.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Modular services and clean domain boundaries</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Event-driven and serverless patterns where they fit</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Performance budgets and load testing before launch</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Clear documentation your team can own</li>
+                    </ul>
+                </div>
+                <div class="code mono"><span class="c">// service.config.ts</span><br><span class="k">export
+                        const</span> <span class="f">architecture</span> = {<br>&nbsp;&nbsp;pattern: <span
+                        class="s">"modular-monolith → services"</span>,<br>&nbsp;&nbsp;scaling: <span
+                        class="s">"auto"</span>,<br>&nbsp;&nbsp;regions: [<span class="s">"us-east"</span>, <span
+                        class="s">"eu-west"</span>],<br>&nbsp;&nbsp;cache: <span class="s">"edge + redis"</span><br>};
+                </div>
+            </div>
+            <div class="panel">
+                <div>
+                    <h3>Security first, always</h3>
+                    <p>Security is part of the build, not an afterthought.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Threat modeling during design</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Automated dependency and secret scanning</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Role-based access and encryption by default</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Support for SOC 2 and GDPR readiness</li>
+                    </ul>
+                </div>
+                <div class="code mono"><span class="c"># security-pipeline.yml</span><br><span
+                        class="f">checks</span>:<br>&nbsp;&nbsp;- <span class="s">sast</span><br>&nbsp;&nbsp;- <span
+                        class="s">dependency-audit</span><br>&nbsp;&nbsp;- <span
+                        class="s">secret-scan</span><br>&nbsp;&nbsp;- <span class="s">container-scan</span><br><span
+                        class="f">gate</span>: <span class="s">block-on-critical</span></div>
+            </div>
+            <div class="panel">
+                <div>
+                    <h3>Automate the repeatable</h3>
+                    <p>Ship faster with pipelines that do the heavy lifting.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>CI/CD with preview environments</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Infrastructure as code</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Automated testing at every layer</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Monitoring, alerting, and on-call runbooks</li>
+                    </ul>
+                </div>
+                <div class="code mono"><span class="c"># deploy</span><br>$ <span class="f">git push</span> origin
+                    main<br>✔ Tests passed (412)<br>✔ Build complete<br>✔ Deployed to production<br><span class="s">→
+                        https://your-app.com</span></div>
+            </div>
+            <div class="panel">
+                <div>
+                    <h3>AI that does real work</h3>
+                    <p>Practical AI that fits your business and your data.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Retrieval-augmented assistants on your knowledge</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Document processing and data extraction</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Guardrails, evaluation, and cost controls</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Private and compliant deployment options</li>
+                    </ul>
+                </div>
+                <div class="code mono"><span class="k">const</span> answer = <span class="k">await</span> <span
+                        class="f">assistant</span>.ask({<br>&nbsp;&nbsp;question: <span class="s">"Summarize Q3
+                        churn"</span>,<br>&nbsp;&nbsp;sources: [<span class="s">"crm"</span>, <span
+                        class="s">"support"</span>],<br>&nbsp;&nbsp;guardrails: <span class="k">true</span><br>});</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="alt" style="padding:80px 0">
+        <div class="container">
+            <div class="stats">
+                <div class="stat rv">
+                    <h3 class="grad"><span class="count" data-to="50">0</span>+</h3>
+                    <p>Projects delivered</p>
+                </div>
+                <div class="stat rv d1">
+                    <h3 class="grad"><span class="count" data-to="12">0</span></h3>
+                    <p>Countries served</p>
+                </div>
+                <div class="stat rv d2">
+                    <h3 class="grad"><span class="count" data-to="99">0</span>.9%</h3>
+                    <p>Uptime target</p>
+                </div>
+                <div class="stat rv d3">
+                    <h3 class="grad"><span class="count" data-to="8">0</span>+</h3>
+                    <p>Years of experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="work">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">Selected work</span>
+                <h2>Results that <span class="grad">speak for themselves</span></h2>
+                <p>Sample case studies. Replace them with your real projects.</p>
+            </div>
+            <div class="cases">
+                <article class="case rv">
+                    <div class="ph thumb"><img
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                            alt="Analytics dashboard on a laptop" loading="lazy" onerror="this.style.display='none'">
+                        <div class="tag-ico"><svg class="i">
+                                <use href="#i-chart" />
+                            </svg></div>
+                    </div>
+                    <div class="case-body"><small>FinTech · Web Platform</small>
+                        <h3>Real-time analytics suite</h3>
+                        <p>Rebuilt a reporting platform to process live data streams for thousands of users.</p>
+                        <div class="metrics">
+                            <div><b>3.2×</b><span>faster load</span></div>
+                            <div><b>−40%</b><span>infra cost</span></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="case rv d1">
+                    <div class="ph thumb"><img
+                            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                            alt="Mobile app on a smartphone" loading="lazy" onerror="this.style.display='none'">
+                        <div class="tag-ico"><svg class="i">
+                                <use href="#i-bag" />
+                            </svg></div>
+                    </div>
+                    <div class="case-body"><small>Retail · Mobile App</small>
+                        <h3>Omnichannel shopping app</h3>
+                        <p>Launched iOS and Android apps with unified inventory and loyalty features.</p>
+                        <div class="metrics">
+                            <div><b>4.8★</b><span>store rating</span></div>
+                            <div><b>+65%</b><span>repeat orders</span></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="case rv d2">
+                    <div class="ph thumb"><img
+                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
+                            alt="Healthcare professional reviewing records" loading="lazy"
+                            onerror="this.style.display='none'">
+                        <div class="tag-ico"><svg class="i">
+                                <use href="#i-file" />
+                            </svg></div>
+                    </div>
+                    <div class="case-body"><small>Healthcare · AI</small>
+                        <h3>Document intelligence engine</h3>
+                        <p>Automated extraction and review of records with human-in-the-loop checks.</p>
+                        <div class="metrics">
+                            <div><b>85%</b><span>less manual work</span></div>
+                            <div><b>98%</b><span>accuracy</span></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="alt" id="process">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">How we work</span>
+                <h2>A process that keeps <span class="grad">projects on track</span></h2>
+                <p>Transparent, iterative, and built around frequent delivery.</p>
+            </div>
+            <div class="timeline">
+                <div class="tstep rv">
+                    <div class="tnum">01</div>
+                    <h3>Discover</h3>
+                    <p>Workshops to define goals, users, risks, and success metrics.</p><small>Week 1–2</small>
+                </div>
+                <div class="tstep rv d1">
+                    <div class="tnum">02</div>
+                    <h3>Design</h3>
+                    <p>Architecture, prototypes, and a prioritized roadmap.</p><small>Week 2–4</small>
+                </div>
+                <div class="tstep rv d2">
+                    <div class="tnum">03</div>
+                    <h3>Build</h3>
+                    <p>Agile sprints with demos every two weeks.</p><small>Week 4–16</small>
+                </div>
+                <div class="tstep rv d3">
+                    <div class="tnum">04</div>
+                    <h3>Scale</h3>
+                    <p>Launch, monitor, and iterate with ongoing support.</p><small>Ongoing</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH GRID -->
+    <section>
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">Tech stack</span>
+                <h2>The right tools for <span class="grad">the right job</span></h2>
+            </div>
+            <div class="tech">
+                <div class="t rv"><span class="ti"><svg class="i">
+                            <use href="#i-code" />
+                        </svg></span>React</div>
+                <div class="t rv d1"><span class="ti"><svg class="i">
+                            <use href="#i-layers" />
+                        </svg></span>Next.js</div>
+                <div class="t rv d2"><span class="ti"><svg class="i">
+                            <use href="#i-server" />
+                        </svg></span>Node.js</div>
+                <div class="t rv d3"><span class="ti"><svg class="i">
+                            <use href="#i-terminal" />
+                        </svg></span>Python</div>
+                <div class="t rv"><span class="ti"><svg class="i">
+                            <use href="#i-cloud" />
+                        </svg></span>AWS</div>
+                <div class="t rv d1"><span class="ti"><svg class="i">
+                            <use href="#i-cloud" />
+                        </svg></span>Azure</div>
+                <div class="t rv d2"><span class="ti"><svg class="i">
+                            <use href="#i-box" />
+                        </svg></span>Docker</div>
+                <div class="t rv d3"><span class="ti"><svg class="i">
+                            <use href="#i-network" />
+                        </svg></span>Kubernetes</div>
+                <div class="t rv"><span class="ti"><svg class="i">
+                            <use href="#i-database" />
+                        </svg></span>PostgreSQL</div>
+                <div class="t rv d1"><span class="ti"><svg class="i">
+                            <use href="#i-database" />
+                        </svg></span>MongoDB</div>
+                <div class="t rv d2"><span class="ti"><svg class="i">
+                            <use href="#i-cpu" />
+                        </svg></span>LLMs</div>
+                <div class="t rv d3"><span class="ti"><svg class="i">
+                            <use href="#i-smartphone" />
+                        </svg></span>Flutter</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="alt">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">Testimonials</span>
+                <h2>Trusted by <span class="grad">teams that ship</span></h2>
+            </div>
+            <div class="slider rv" id="slider">
+                <div class="slide on">
+                    <blockquote>“Axivo felt like an extension of our own team. They delivered ahead of schedule and the
+                        quality was outstanding.”</blockquote>
+                    <div class="who">
+                        <div class="ph av"><img
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+                                alt="Jane Doe" loading="lazy" onerror="this.style.display='none'"></div>
+                        <div class="nm"><b>Jane Smith</b><span>CTO, HIQ Solutions LLC</span></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <blockquote>“Clear communication, strong engineering, and zero surprises. Our platform now scales
+                        effortlessly.”</blockquote>
+                    <div class="who">
+                        <div class="ph av"><img
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+                                alt="Mark Smith" loading="lazy" onerror="this.style.display='none'"></div>
+                        <div class="nm"><b>Mark Smith</b><span>Founder, Golden Snow Inc</span></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <blockquote>“The AI assistant they built cut our support workload dramatically while keeping our
+                        data private.”</blockquote>
+                    <div class="who">
+                        <div class="ph av"><img
+                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+                                alt="Anna Lee" loading="lazy" onerror="this.style.display='none'"></div>
+                        <div class="nm"><b>Anna Lee</b><span>VP Operations, Xyntrix LLC</span></div>
+                    </div>
+                </div>
+                <div class="dots" id="dots"><button class="on" aria-label="Slide 1"></button><button
+                        aria-label="Slide 2"></button><button aria-label="Slide 3"></button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <div class="container">
+            <div class="head rv">
+                <span class="eyebrow">Engagement models</span>
+                <h2>Flexible ways to <span class="grad">work together</span></h2>
+                <p>Placeholder pricing. Adjust to your real rates.</p>
+            </div>
+            <div class="plans">
+                <div class="plan rv">
+                    <h3>Discovery Sprint</h3>
+                    <div class="price">$4,900<small> / fixed</small></div>
+                    <p>Validate your idea with a clear plan.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>2-week workshop</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Architecture and tech plan</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Clickable prototype</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Estimate and roadmap</li>
+                    </ul><a href="#contact" class="btn btn-ghost">Get Started</a>
+                </div>
+                <div class="plan pop rv d1"><span class="flag">MOST POPULAR</span>
+                    <h3>Project Delivery</h3>
+                    <div class="price">Custom<small> / scoped</small></div>
+                    <p>Full build with a dedicated team.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>End-to-end design and development</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Dedicated project manager</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Bi-weekly demos</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>90-day post-launch support</li>
+                    </ul><a href="#contact" class="btn btn-primary">Request a Quote</a>
+                </div>
+                <div class="plan rv d2">
+                    <h3>Dedicated Team</h3>
+                    <div class="price">$9K+<small> / month</small></div>
+                    <p>Scale your team with senior engineers.</p>
+                    <ul>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Flexible team size</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Month-to-month terms</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Embedded in your workflow</li>
+                        <li><svg class="i">
+                                <use href="#i-check" />
+                            </svg>Priority support</li>
+                    </ul><a href="#contact" class="btn btn-ghost">Talk to Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="alt" id="faq">
+        <div class="container">
+            <div class="head rv"><span class="eyebrow">FAQ</span>
+                <h2>Common <span class="grad">questions</span></h2>
+            </div>
+            <div class="faq rv">
+                <div class="qa on"><button>How long does a typical project take?<svg class="i">
+                            <use href="#i-plus" />
+                        </svg></button>
+                    <div class="ans">Most projects take 8 to 16 weeks, depending on scope. We give a firm timeline after
+                        the discovery phase.</div>
+                </div>
+                <div class="qa"><button>Who owns the code?<svg class="i">
+                            <use href="#i-plus" />
+                        </svg></button>
+                    <div class="ans">You do. All source code and intellectual property transfer to you upon payment.
+                    </div>
+                </div>
+                <div class="qa"><button>Do you offer support after launch?<svg class="i">
+                            <use href="#i-plus" />
+                        </svg></button>
+                    <div class="ans">Yes. Every project includes a support window, and we offer ongoing maintenance
+                        plans.</div>
+                </div>
+                <div class="qa"><button>Can you work with our existing team?<svg class="i">
+                            <use href="#i-plus" />
+                        </svg></button>
+                    <div class="ans">Absolutely. We can embed with your engineers or take on a clearly scoped part of
+                        your roadmap.</div>
+                </div>
+                <div class="qa"><button>How do you handle security and confidentiality?<svg class="i">
+                            <use href="#i-plus" />
+                        </svg></button>
+                    <div class="ans">We sign NDAs, follow secure development practices, and limit access on a
+                        need-to-know basis.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding-top:0">
+        <div class="container">
+            <div class="cta rv">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
+                    alt="" loading="lazy" onerror="this.style.display='none'">
+                <div>
+                    <h2>Let's build what's next.</h2>
+                    <p>Tell us about your idea. We'll reply within one business day with honest, practical next steps.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Start Your Project <svg class="i">
+                            <use href="#i-arrow" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="alt" id="contact">
+        <div class="container contact">
+            <div class="rv">
+                <span class="eyebrow">Contact</span>
+                <h2>Tell us about <span class="grad">your project</span></h2>
+                <p>Share a few details and our team will get back to you shortly.</p>
+                <div class="info">
+                    <div class="r">
+                        <div class="ico"><svg class="i">
+                                <use href="#i-mail" />
+                            </svg></div>
+                        <div class="txt"><b>Email</b><span>info@axivo-llc.com</span></div>
+                    </div>
+                    <div class="r">
+                        <div class="ico"><svg class="i">
+                                <use href="#i-phone" />
+                            </svg></div>
+                        <div class="txt"><b>Phone</b><span>+1 (786) 786-9940</span></div>
+                    </div>
+                    <div class="r">
+                        <div class="ico"><svg class="i">
+                                <use href="#i-pin" />
+                            </svg></div>
+                        <div class="txt"><b>Office</b><span>7 Lakeview Dr, Roberts, MT 59070</span></div>
+                    </div>
+                    <div class="r">
+                        <div class="ico"><svg class="i">
+                                <use href="#i-clock" />
+                            </svg></div>
+                        <div class="txt"><b>Hours</b><span>Mon–Fri, 9:00 AM – 6:00 PM ET</span></div>
+                    </div>
+                </div>
+            </div>
+            <form class="card-form rv d1" id="form">
+                <div class="row">
+                    <label>Full name<input required placeholder="Jane Doe"></label>
+                    <label>Work email<input type="email" required placeholder="jane@company.com"></label>
+                </div>
+                <div class="row">
+                    <label>Company<input placeholder="Company name"></label>
+                    <label>Service<select>
+                            <option>Web Platform</option>
+                            <option>Mobile App</option>
+                            <option>Cloud & DevOps</option>
+                            <option>AI & Automation</option>
+                            <option>UI/UX Design</option>
+                            <option>Other</option>
+                        </select></label>
+                </div>
+                <label>Budget<select>
+                        <option>Under $10K</option>
+                        <option>$10K – $50K</option>
+                        <option>$50K – $150K</option>
+                        <option>$150K+</option>
+                    </select></label>
+                <label>Project details<textarea required
+                        placeholder="Goals, timeline, anything we should know..."></textarea></label>
+                <button class="btn btn-primary" type="submit">Send Message <svg class="i">
+                        <use href="#i-arrow" />
+                    </svg></button>
+                <div id="msg"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="fgrid">
+                <div>
+                    <a href="#home" class="logo"><svg width="40" height="40">
+                            <use href="#axivo" />
+                        </svg><span>Axivo</span><em>LLC</em></a>
+                    <p>Modern software engineering for ambitious businesses. Cloud, AI, web, and mobile.</p>
+                    <div class="socials">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg
+                                class="bi">
+                                <use href="#b-linkedin" />
+                            </svg></a>
+                        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><svg class="bi">
+                                <use href="#b-x" />
+                            </svg></a>
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><svg class="bi">
+                                <use href="#b-github" />
+                            </svg></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg
+                                class="bi">
+                                <use href="#b-youtube" />
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="fcontact">
+                        <li>7 Lakeview Dr<br>Roberts, MT 59070</li>
+                        <li><a href="tel:+17867869940">+1 (786) 786-9940</a></li>
+                        <li><a href="mailto:info@axivo-llc.com">info@axivo-llc.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copy"><span>© <span id="yr"></span> Axivo LLC. All rights reserved. Photos via Unsplash.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="icon-btn" id="top" aria-label="Back to top"><svg class="i">
+            <use href="#i-up" />
+        </svg></button>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
